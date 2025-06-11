@@ -15,6 +15,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.IOException;
 import java.time.Duration;
+import utilities.hooks;
+
+
 
 
 public class LandingPageStepdefinition {
@@ -45,7 +48,7 @@ public class LandingPageStepdefinition {
     }
 
 
-    @When("User searches with name {string}")
+    @When("^User searches with name (.+)$")
     public void user_searches_with_name(String string) throws InterruptedException {
    //     pom = new pageObjectManager(testContextSetup.driver);
         landingPageObjects lp = testContextSetup.pom.LandingPage();
